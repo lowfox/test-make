@@ -1,0 +1,24 @@
+hello.c更新 1
+
+make hello (hello:hello.c)
+hello.c > hello
+実行される
+
+hello 更新 2
+
+make hello (hello:hello.c) 
+
+hello.c<hello
+実行されない
+
+hello.c更新3
+
+make hello
+
+hello.c > hello
+実行される
+
+hello 更新　4
+
+
+

@@ -1,0 +1,13 @@
+hello:hello.o print.o
+	gcc -Wall -O2 -o hello hello.o print.o
+	.
+hello.o:hello.c
+	gcc -c hello.c
+
+print.o:print.c
+	gcc -c print.c
+
+.PHONY:clean
+#すでに作りたいファイル(clean)があると実行しない。ので上の.PHONYをつける。そうするとファイルがあっても実行される。ただのスクリプトとして使いたいコマンドの時上に書く。
+clean:
+	rm -f print.o hello.o hello
